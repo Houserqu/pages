@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.less';
 import App from './App';
+import { Provider } from 'mobx-react';
 import registerServiceWorker from './registerServiceWorker';
+import WeatherStore from './stores/WeatherStore';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+let stores = {
+  WeatherStore,
+};
+
+ReactDOM.render((
+  <Provider {...stores}>
+    <App />
+  </Provider>
+  ), document.getElementById('root'));
 registerServiceWorker();

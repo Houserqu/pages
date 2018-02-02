@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.less';
+import { inject } from 'mobx-react';
 
+@inject('WeatherStore')
 class App extends Component {
   render() {
     return (
