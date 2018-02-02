@@ -10,7 +10,7 @@ export function getWeather(params) {
         "Authorization": "APPCODE 557d3e7aaf744971bca3ed75c7c0421f"
       },
     }).then((response) => {
-      if(response.status == 200){
+      if(response.status === 200){
         return response.json()
       } else {
         reject(response.statusText);
@@ -32,7 +32,7 @@ export function getCity(params) {
         "Authorization": "APPCODE 557d3e7aaf744971bca3ed75c7c0421f"
       },
     }).then((response) => {
-      if(response.status == 200){
+      if(response.status === 200){
         return response.json()
       } else {
         reject(response.statusText);
