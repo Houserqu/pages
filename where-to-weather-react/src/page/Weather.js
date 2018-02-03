@@ -15,11 +15,14 @@ class Weather extends Component {
   render(){
     const { daily, weather, week, img, temp } = this.props.WeatherStore.weather;
 
+    console.log(window);
+
     return (
-      <div>
+      <div className='weather'>
         <div className="weather__content">
 
         </div>
+        <div className="weather__footer--glass" />
         <div className="weather__footer">
           <NowWeather weather={weather} week={week} img={img} temp={temp} />
           <DailyWeather data={daily}/>
