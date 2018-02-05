@@ -4,7 +4,7 @@ const WeatherItem = ({data}) => {
   const { day, night, week } = data
   return (
     <div className='weather__daily--item'>
-      <p>
+      <p className='weather__daily--item-week'>
         {week}
         </p>
       <img src={`/weathericon/${day.img}.png`} className=''/>

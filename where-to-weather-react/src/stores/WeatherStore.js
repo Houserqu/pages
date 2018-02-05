@@ -3,6 +3,9 @@ import {getWeather} from '../service/weather';
 
 export class WeatherStore {
 
+  @observable location = {
+    city: '北京'
+  }
   @observable weather = {
     "city": "北京",
     "cityid": "1",
