@@ -1,0 +1,262 @@
+@import './default.less';
+
+body{
+  background: @background;
+  font-family: 'Sunflower', sans-serif;
+}
+
+#container {
+  padding: 100px;
+  background-color: #fff;
+  width: 1400px;
+  height: 1600px;
+  margin: auto;
+  display: flex;
+}
+
+#left {
+  flex: 1
+}
+
+#right {
+  flex: 1;
+}
+
+#colors {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  .color-block {
+    height: 120px;
+    width: 120px;
+    border-radius: 8px;
+  }
+
+  .color-1 {
+    background: @color-1
+  }
+
+  .color-2 {
+    background: @color-2
+  }
+
+  .color-3 {
+    background: @color-3
+  }
+
+  .color-4 {
+    background: @color-4
+  }
+}
+
+.typemodal {
+  border: 3px solid @color-4;
+  border-radius: 10px;
+  padding: 50px;
+
+  h2 {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    color: @color-4;
+  }
+
+  .content {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+#buttons {
+  button{
+    margin: 20px 50px;
+    outline: none;
+  }
+
+  .button {
+    width: 240px;
+    height: 100px;
+    border: 4px solid;
+    border-radius: 8px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .primary {
+    background: @color-1;
+    color: #fff;
+    border-color: @color-1;
+  }
+
+  .primary:hover{
+    background-color: lighten(@color-1, 20%);
+  }
+
+  .primary-empty {
+    background: #fff;
+    color: @color-1;
+    border-color: @color-1;
+  }
+
+  .primary-empty:hover{
+    background-color: lighten(@color-3, 50%);
+  }
+
+  .info {
+    background: @color-2;
+    color: #fff;
+    border-color: @color-2;
+  }
+
+  .info:hover{
+    background-color: lighten(@color-2, 20%);
+  }
+
+  .info-empty {
+    background: #fff;
+    color: @color-2;
+    border-color: @color-2;
+  }
+
+  .info-empty:hover{
+    background-color: lighten(@color-3, 50%);
+  }
+
+  .disable {
+    background: @color-3;
+    color: #fff;
+    border-color: @color-3;
+  }
+
+  .disable:hover{
+    background-color: lighten(@color-3, 20%);
+  }
+
+  .disable-empty {
+    background: #fff;
+    color: @color-3;
+    border-color: @color-3;
+  }
+
+  .disable-empty:hover{
+    background-color: lighten(@color-3, 50%);
+  }
+}
+
+#forms{
+  margin-left: 50px;
+  margin-top: 60px;
+  input {
+    margin-bottom: 50px;
+    outline: none;
+  }
+  .text {
+    width: 530px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    border: 4px solid;
+    border-radius: 10px;
+    padding-left: 30px;
+    color: @color-4;
+  }
+
+  .text::placeholder {
+    color: @color-4;
+  }
+
+  .disable {
+    border-color: @color-4;
+    color: @color-4;
+  }
+
+  .wrong {
+    border-color: @color-5;
+    color: @color-5;
+  }
+
+  .typed {
+    border-color: @color-1;
+    color: @color-1 ;
+  }
+}
+
+.switch {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background-color: @color-4;
+  border-radius: 25px;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  transition: background-color 0.5s;
+  outline: none;
+}
+
+.switch::before {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 5px;
+  left: 5px;
+  transition: left 0.5s;
+}
+
+.switch:checked {
+  background-color: @color-2;
+}
+
+.switch:checked:before {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 5px;
+  left: 55px;
+}
+
+.makeshadow(@color, @size) {
+  @val: 5px 0 0 @size @color;
+
+  .loop(@i) when (@i > 6){
+    @val: @{i}px 0 0 @{size} #@{color};
+    .loop(@i - 1);
+  }
+
+   @return: @val;
+}
+
+.ranger {
+  -webkit-appearance: none;
+  outline: none;
+  width: 390px;
+
+  &::-webkit-slider-runnable-track{
+    height: 20px;
+    background-color: @color-4;
+    border-radius: 10px; /*将轨道设为圆角的*/
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 4px solid @color-1;
+    margin-top: -5px;
+    box-shadow: .makeshadow(@color-1, 100)
+  }
+}
+
+
+
