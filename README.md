@@ -19,4 +19,6 @@ designed by Childish Gambino
 
 [设计地址](https://www.sketchappsources.com/free-source/693-web-ui-kit-sketch-freebie-resource.html) [在线预览](http://page.houserqu.com/web-ui-kit-by-Childish-Gambino/index.html) [项目地址](https://github.com/Houserqu/pages/tree/master/web-ui-kit-by-Childish-Gambino)
 
+除了左下角的折线图canvas模块必须用js绘画，其他部分都是纯css实现。video没有使用js，所以控件功能没有去实现。
+
 ![Childish Gambino](https://houser.oss-cn-shanghai.aliyuncs.com/others/WX20180511-214034.png)
