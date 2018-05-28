@@ -4,11 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
   <title>web-kit</title>
 </head>
 <body>
-  <div id="test">1231
-    <div>333333</div>
+  <div id="container">
+    <div id="left">
+      <div id="colors">
+        <div class="color-block color-1"></div>
+        <div class="color-block color-2"></div>
+        <div class="color-block color-3"></div>
+        <div class="color-block color-4"></div>
+      </div>
+
+      <div class="typemodal">
+        <h2>
+          This is a Headline
+        </h2>
+        <p class="subtitle">
+          Author Name
+        </p>
+        <p class="content">
+ This is some body text. You might use it to read and write long sequences of words, which will then make up a thought which
+makes sense, unlike the one you are reading right here, right now.
+        </p>
+      </div>
+
+      <div id="user">
+        <div class="user-card">
+          <div class="thumb">
+            <img src="http://oss.houserqu.com/houserpage/houser.jpg" alt="Houser">
+          </div>
+          <div class="info">
+            <p class="title">
+              Houser
+            </p>
+            <p class="subtitle">
+              Web developer
+            </p>
+          </div>
+          <div class="action"></div>
+        </div>
+      </div>
+      <div id="table">
+        <canvas id="myLineTable" class="lineTable" width="640" height="280"></canvas>
+      </div>
+    </div>
+    <div id="right">
+      <div id="top">
+        <div id="sliders">
+          <input type="range" class="ranger">
+        </div>
+        <div id="sliders">
+
+        </div>
+        <div id="switchs">
+          <input type="checkbox" class="switch">
+          <input type="checkbox" class="switch" checked>
+        </div>
+      </div>
+      <div id="buttons">
+        <button class="button primary-empty">Button</button>
+        <button class="button primary">Button</button>
+        <button class="button info-empty">Button</button>
+        <button class="button info">Button</button>
+        <button class="button disable-empty">Button</button>
+        <button class="button disable">Button</button>
+      </div>
+      <div id="forms">
+        <input class="text disable" placeholder="Typed Text">
+        <input class="text wrong" placeholder="Typed Text">
+        <input class="text typed" placeholder="Typed Text">
+      </div>
+        <div class="video">
+          <video style="width: 100%;height: 100%"></video>
+          <div class="control">
+            <div class="control__start"></div>
+            <input type="range" class="ranger">
+          </div>
+      </div>
+    </div>
   </div>
 <script type="text/javascript" src="bundle.js"></script></body>
 </html>

@@ -12,6 +12,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015']
+            }
+        },
+        exclude: /node_modules/
+      },
+      {
         test: /\.less$/,
         use: ['style-loader', 'css-loader', {
           loader: 'less-loader',

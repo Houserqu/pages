@@ -14,7 +14,7 @@ body{
   padding: 100px;
   background-color: #fff;
   width: 1400px;
-  height: 1600px;
+  height: 1300px;
   margin: auto;
   display: flex;
 }
@@ -151,7 +151,7 @@ body{
 
 #forms{
   margin-left: 50px;
-  margin-top: 60px;
+  margin-top: 20px;
   input {
     margin-bottom: 50px;
     outline: none;
@@ -297,6 +297,11 @@ body{
       border: 2px solid @color-4;
       border-radius: 50%;
       padding: 10px;
+      transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: rotate(360deg);
+      }
     }
   }
 
@@ -341,8 +346,8 @@ body{
 }
 
 .video {
-  width: 530px;
-  height: 350px;
+  width: 560px;
+  height: 300px;
   position: relative;
   margin-left: 50px;
   .box-border;
@@ -374,4 +379,13 @@ body{
       background: none;
     }
   }
+}
+
+#table {
+  margin-top: 50px;
+}
+
+.lineTable {
+  .box-border;
+  padding: 10px 30px;
 }
