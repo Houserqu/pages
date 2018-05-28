@@ -11,7 +11,6 @@ module.exports = {
   },
   module: {
     rules: [
-
       {
         test: /\.less$/,
         use: ['style-loader', 'css-loader', {
@@ -22,7 +21,10 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
-
+      {
+        test: /\.(jpg|png)$/,
+        use: ['url-loader']
+      }
     ]
   },
   devtool: 'inline-source-map',
